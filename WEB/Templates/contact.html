@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/footer.css">
+    <link rel="stylesheet" href="/static/style/contact.css">
+    <script src="/static/script/script.js"></script>
+    <title>Contactez-nous</title>
+</head>
+<body>
+<header id="header">
+    <div class="titre">
+        <div class="logo_titre">
+            <img src="/image/logo.jpg" alt="Logo de Mon Voyage à New York">
+        </div>
+        <div class="titre_site_web">
+            <h1>Mon Voyage à New York</h1>
+        </div>
+    </div>
+    <button id="accessibiliteToggle">Options d'accessibilité</button> <!-- Bouton pour afficher le menu -->
+    <div class="menu_accessibilite" hidden>
+        <div aria-label="Options d'accessibilité">
+            <input type="checkbox" id="dyslexie" name="dyslexie" value="dyslexie" hidden="hidden">
+            <label for="dyslexie">Mode dyslexique</label>
+
+            <input type="checkbox" id="interligne-augmentation" name="interligne-augmentation"
+                   value="interligne-augmentation" hidden="hidden">
+            <label for="interligne-augmentation">Augmentation des interlignes</label>
+
+            <input type="checkbox" id="contrast" name="contrast" value="contrast" hidden="hidden">
+            <label for="contrast">Contraste Fort</label>
+        </div>
+    </div>
+</header>
+<main>
+    <h1>Contactez-nous</h1>
+
+    <form method="post">
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required aria-label="Nom" aria-describedby="nameExample">
+            <span id="nameExample" class="example">Exemple: John Doe</span>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required aria-label="Email" aria-describedby="emailExample">
+            <span id="emailExample" class="example">Exemple: john.doe@example.com</span>
+        </div>
+        <div>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required aria-label="Message"
+                      aria-describedby="messageExample"></textarea>
+            <span id="messageExample"
+                  class="example">Exemple: Bonjour, je voudrais obtenir plus d'informations sur...</span>
+            <button type="button" onclick="startDictation('message')">Commencer la Dictée</button>
+        </div>
+        <div>
+            <button type="submit">Envoyer</button>
+        </div>
+        <div>
+            <button onclick="window.location.href = '/';">Retour à l'acceuil</button>
+        </div>
+    </form>
+
+</main>
+<footer aria-label="Informations du pied de page">
+    <section>
+        <h2>A propos</h2> <!-- Utilisez <h2> au lieu de <h3> si c'est le niveau de titre approprié -->
+        <nav aria-label="À propos de nous">
+            <!-- Ajout de l'élément <nav> avec aria-label pour une meilleure navigation -->
+            <ul>
+                <li>
+                    <a href="/about" rel="noopener noreferrer">A propos de nous</a>
+                </li>
+                <li>
+                    <a href="/personal_data" rel="noopener noreferrer">Données personnelles</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <h2>Aide et assistance</h2> <!-- Utilisez <h2> au lieu de <h3> si c'est le niveau de titre approprié -->
+        <nav aria-label="Aide et assistance">
+            <!-- Ajout de l'élément <nav> avec aria-label pour une meilleure navigation -->
+            <ul>
+                <li>
+                    <a href="/contact" rel="noopener noreferrer">Contactez-nous</a>
+                </li>
+                <li>
+                    <a href="/faq" rel="noopener noreferrer">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+</body>
+</html>

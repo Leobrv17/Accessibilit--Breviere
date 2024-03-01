@@ -1,0 +1,41 @@
+section[aria-labelledby="donneesPersonnelles"] {
+    max-width: 800px; /* Limite la largeur de la section pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre la section */
+    padding: 20px; /* Ajoute de l'espace autour du contenu de la section */
+}
+
+section[aria-labelledby="donneesPersonnelles"] h2 {
+    margin-bottom: 20px; /* Espacement sous le titre h2 */
+    color: #333; /* Couleur du texte pour le titre */
+    font-size: 24px; /* Taille de la police pour le titre */
+}
+
+section[aria-labelledby="donneesPersonnelles"] p {
+    margin-bottom: 20px; /* Espacement entre les paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+    color: #666; /* Couleur du texte des paragraphes */
+}
+
+section[aria-labelledby="donneesPersonnelles"] table {
+    width: 100%; /* La table utilise toute la largeur disponible */
+    border-collapse: collapse; /* Supprime les espaces entre les bordures des cellules */
+    margin-bottom: 20px; /* Espacement sous la table */
+}
+
+section[aria-labelledby="donneesPersonnelles"] th,
+section[aria-labelledby="donneesPersonnelles"] td {
+    text-align: left; /* Alignement du texte à gauche pour les cellules */
+    padding: 10px; /* Espacement à l'intérieur des cellules */
+    border: 1px solid #ddd; /* Bordure des cellules */
+}
+
+section[aria-labelledby="donneesPersonnelles"] th {
+    background-color: #f9f9f9; /* Couleur de fond pour les en-têtes de table */
+    color: #333; /* Couleur du texte des en-têtes */
+}
+
+section[aria-labelledby="donneesPersonnelles"] caption {
+    margin-bottom: 10px; /* Espacement sous la légende de la table */
+    font-weight: bold; /* Texte en gras pour la légende */
+    text-align: left; /* Alignement du texte de la légende à gauche */
+}

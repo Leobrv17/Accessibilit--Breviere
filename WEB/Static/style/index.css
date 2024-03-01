@@ -1,0 +1,58 @@
+main {
+    font-family: "Roboto Light", sans-serif;
+    color: #333; /* Couleur de texte pour un bon contraste sur fond clair */
+    background-color: #fff; /* Fond clair pour assurer le contraste */
+    line-height: 1.6;
+    padding: 20px; /* Espacement autour du contenu principal */
+}
+
+article {
+    margin-bottom: 40px; /* Espacement entre les articles */
+}
+
+article h2, article h3 {
+    color: #000; /* Couleur noire pour les titres pour un contraste élevé */
+}
+
+article img {
+    display: block; /* Assure que l'image est affichée comme un bloc */
+    width: 100%; /* Force toutes les images à avoir la même largeur que leur conteneur */
+    max-width: 400px; /* Définit une largeur maximale pour les images pour qu'elles aient toutes la même taille */
+    height: auto; /* Ajuste la hauteur automatiquement pour maintenir le ratio d'aspect de l'image */
+    object-fit: cover; /* Assure que l'image couvre la zone définie sans déformer son ratio d'aspect */
+    margin: 0 auto 20px; /* Centre l'image et ajoute un espace en dessous */
+    border-radius: 10px; /* Bords légèrement arrondis pour un design plus doux */
+}
+
+
+ul {
+    list-style-type: none; /* Retirer les puces pour une liste plus épurée */
+    padding-left: 0; /* Aligner correctement les éléments de liste */
+    margin-bottom: 20px; /* Espacement sous la liste */
+}
+
+input[type="text"], button {
+    padding: 10px; /* Espacement à l'intérieur des champs de texte et des boutons */
+    margin-top: 5px; /* Espacement au-dessus des champs de texte et des boutons */
+    border: 1px solid #ccc; /* Bordure discrète pour les champs de texte */
+    border-radius: 5px; /* Bords arrondis pour les champs de texte et boutons */
+    resize: vertical; /* Limiter le redimensionnement vertical uniquement */
+}
+
+button {
+    background-color: #F1C642; /* Couleur de fond jaune pour le bouton */
+    color: #000; /* Texte noir pour le bouton pour un contraste élevé */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    border: none; /* Pas de bordure pour le bouton pour un look plus net */
+}
+
+button:hover, button:focus {
+    background-color: #dba40e; /* Assombrir le bouton lors du survol pour un feedback visuel */
+    outline: none; /* Supprimer le contour par défaut pour le focus */
+}
+
+/* Améliorations d'accessibilité spécifiques */
+input[type="text"]:focus, button:focus {
+    outline: 2px solid #333; /* Contour visible pour l'élément en focus */
+}
+

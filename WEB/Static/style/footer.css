@@ -1,0 +1,46 @@
+footer {
+    background-color: #333;
+    color: #cccccc;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Ajout d'un peu de padding pour l'esthétique */
+}
+
+footer section {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer h3 {
+    color: #fff; /* Assure que le titre est bien visible */
+}
+
+footer ul {
+    list-style: none; /* Enlève les puces des listes pour une meilleure esthétique */
+    padding: 0; /* Enlève le padding par défaut des listes */
+}
+
+footer ul li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    margin-left: 10px;
+}
+
+footer ul li a::before {
+    content: '•'; /* Utilise le caractère de puce */
+    display: inline-block; /* Affiche la puce comme un élément en ligne */
+    width: 20px; /* Espace pour la puce */
+    margin-right: 5px; /* Espacement entre la puce et le texte du lien */
+    color: #fff; /* Couleur de la puce, assurez-vous qu'elle est visible sur le fond du footer */
+}
+
+footer ul li a {
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime la décoration des liens */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition douce pour le changement de couleur et l'agrandissement */
+}
+
+footer ul li a:hover, footer ul li a:focus {
+    color: #F1C642; /* Change la couleur des liens au survol ou focus pour une meilleure visibilité */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol pour attirer l'attention */
+}
+

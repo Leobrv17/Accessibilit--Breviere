@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/footer.css">
+    <link rel="stylesheet" href="/static/style/contact.css">
+    <link rel="stylesheet" href="/static/style/faq.css">
+    <script src="/static/script/script.js"></script>
+    <title>Contactez-nous</title>
+</head>
+<body>
+<header id="header">
+    <div class="titre">
+        <div class="logo_titre">
+            <img src="/image/logo.jpg" alt="Logo de Mon Voyage à New York">
+        </div>
+        <div class="titre_site_web">
+            <h1>Mon Voyage à New York</h1>
+        </div>
+    </div>
+    <!-- Bouton pour afficher le menu d'accessibilité, bonne pratique -->
+    <button id="accessibiliteToggle">Options d'accessibilité</button>
+    <div class="menu_accessibilite" hidden>
+        <div aria-label="Options d'accessibilité">
+            <!-- Il est préférable de ne pas utiliser l'attribut hidden sur les inputs si vous souhaitez qu'ils soient accessibles quand le menu est affiché. -->
+            <input type="checkbox" id="dyslexie" name="dyslexie" value="dyslexie">
+            <label for="dyslexie">Mode dyslexique</label>
+
+            <input type="checkbox" id="interligne-augmentation" name="interligne-augmentation"
+                   value="interligne-augmentation">
+            <label for="interligne-augmentation">Augmentation des interlignes</label>
+
+            <input type="checkbox" id="contrast" name="contrast" value="contrast">
+            <label for="contrast">Contraste Fort</label>
+        </div>
+    </div>
+</header>
+<main>
+    <section aria-labelledby="faqIntroduction">
+        <h2 id="faqIntroduction">Bienvenue dans notre FAQ sur New York</h2>
+        <p>
+            Bienvenue dans notre Foire Aux Questions (FAQ) dédiée à New York, la ville qui ne dort jamais ! Que vous
+            soyez en pleine planification de votre voyage ou simplement curieux d'en savoir plus sur ce melting pot
+            culturel, notre FAQ est ici pour éclairer votre chemin.
+        </p>
+        <p>
+            Nous avons compilé une liste des questions les plus fréquemment posées par nos visiteurs, couvrant tout, des
+            astuces de voyage essentielles à des recommandations personnalisées qui vous aideront à découvrir les joyaux
+            cachés de New York. De la navigation dans le réseau complexe des transports en commun de la ville à la
+            découverte des meilleurs spots pour savourer la cuisine locale, nous avons pour ambition de rendre votre
+            expérience new-yorkaise aussi fluide et enrichissante que possible.
+        </p>
+        <p>
+            Notre carrousel de questions est conçu pour vous fournir des réponses rapides et précises à des
+            interrogations courantes, tout en vous offrant un aperçu de ce que New York a de meilleur à offrir.
+            N'hésitez pas à parcourir ces questions pour planifier votre voyage, satisfaire votre curiosité, ou même
+            découvrir de nouvelles inspirations pour vos futures aventures urbaines.
+        </p>
+        <p>
+            Si vos questions restent sans réponses après avoir exploré notre FAQ, n'hésitez pas à nous contacter
+            directement. Nous sommes là pour vous aider à naviguer dans la richesse et la diversité de New York.
+            Préparez-vous à explorer, à être surpris et à tomber amoureux de cette ville incroyable, une question à la
+            fois.
+        </p>
+    </section>
+    <div id="faqCarousel" class="carousel">
+        <div class="carousel-item active">
+            <h2>Comment se déplacer à New York ?</h2>
+            <p>New York offre une multitude d'options de transport adaptées à tous les besoins. Le métro, opérant
+                24h/24, est l'une des manières les plus efficaces et économiques de parcourir la ville. Les bus offrent
+                également une bonne couverture de la ville, idéale pour admirer les rues de New York tout en se
+                déplaçant. Pour plus de commodité, les taxis jaunes et les services de VTC comme Uber et Lyft sont
+                omniprésents. Enfin, pour ceux qui préfèrent l'exercice ou veulent une option écologique, les vélos en
+                libre-service Citi Bike sont disponibles dans toute la ville.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>Où trouver les meilleurs restaurants ?</h2>
+            <p>New York est célèbre pour sa scène culinaire diverse et dynamique. Greenwich Village est connu pour ses
+                cafés de poètes et ses restaurants italiens authentiques. SoHo offre des options haut de gamme et des
+                espaces branchés, idéal pour les amateurs de nouveautés gastronomiques. L'East Village regorge de
+                trésors cachés, proposant des cuisines du monde entier. Pour ceux qui cherchent quelque chose de
+                particulièrement unique, explorez les marchés alimentaires comme le Chelsea Market ou rendez-vous à
+                Brooklyn pour des expériences culinaires avant-gardistes.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>Quels sont les sites touristiques incontournables ?</h2>
+            <p>Aucun voyage à New York ne serait complet sans une visite de ses sites emblématiques. La Statue de la
+                Liberté, symbole de liberté et d'espoir, offre une vue imprenable sur la ville et son histoire. Central
+                Park, le poumon vert de Manhattan, est parfait pour une escapade naturelle au cœur de la métropole.
+                L'Empire State Building propose une vue à couper le souffle depuis son observatoire, offrant un panorama
+                unique sur New York. Le Metropolitan Museum of Art, l'un des musées les plus célèbres au monde, abrite
+                une collection d'œuvres d'art inestimable, reflétant plusieurs millénaires de culture humaine. Enfin,
+                pour une expérience mémorable, ne manquez pas Times Square et son ambiance électrique, Broadway pour ses
+                spectacles légendaires, et le mémorial du 11 septembre pour un moment de réflexion sur l'histoire
+                récente de la ville.</p>
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">Précédent</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">Suivant</button>
+    </div>
+</main>
+<footer aria-label="Informations du pied de page">
+    <section>
+        <h2>A propos</h2>
+        <nav aria-label="À propos de nous">
+            <ul>
+                <li>
+                    <a href="/about" rel="noopener noreferrer">A propos de nous</a>
+                </li>
+                <li>
+                    <a href="/personal_data" rel="noopener noreferrer">Données personnelles</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <h2>Aide et assistance</h2>
+        <nav aria-label="Aide et assistance">
+            <ul>
+                <li>
+                    <a href="/contact" rel="noopener noreferrer">Contactez-nous</a>
+                </li>
+                <li>
+                    <a href="/faq" rel="noopener noreferrer">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+</body>
+</html>

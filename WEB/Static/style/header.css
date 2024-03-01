@@ -1,0 +1,92 @@
+/* Réinitialisation de base pour une cohérence entre les navigateurs */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Light", sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.titre {
+    display: flex;
+    align-items: center; /* Centrer verticalement le logo et le titre */
+}
+
+.logo_titre {
+    width: 200px;
+    height: auto;
+}
+
+.logo_titre img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Cercle parfait */
+    object-fit: cover;
+}
+
+.titre h1 {
+    margin-left: 20px;
+    font-size: calc(2vw + 24px); /* Ajustement dynamique de la taille */
+}
+
+.menu_accessibilite > div {
+    margin-bottom: 10px;
+}
+
+.menu_accessibilite input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu_accessibilite label {
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.menu_accessibilite input[type="checkbox"] + label {
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu_accessibilite input[type="checkbox"]:checked + label,
+.menu_accessibilite input[type="checkbox"]:hover + label {
+    background-color: #F1C642;
+    color: #000; /* Assurer un bon contraste */
+}
+
+.menu_accessibilite input[type="checkbox"]:focus + label {
+    outline: 2px solid #F1C642;
+}
+
+.menu_accessibilite {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#accessibiliteToggle {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+#accessibiliteToggle:hover,
+#accessibiliteToggle:focus {
+    background-color: #444;
+}

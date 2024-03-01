@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage à New York</title>
+    <link rel="stylesheet" href="/static/style/index.css">
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/footer.css">
+    <script src="/static/script/script.js"></script>
+</head>
+<body>
+<header id="header">
+    <div class="titre">
+        <div class="logo_titre">
+            <img src="/image/logo.jpg" alt="Logo de Mon Voyage à New York">
+        </div>
+        <div class="titre_site_web">
+            <h1>Mon Voyage à New York</h1>
+        </div>
+    </div>
+    <button id="accessibiliteToggle">Options d'accessibilité</button> <!-- Bouton pour afficher le menu -->
+    <div class="menu_accessibilite" hidden>
+        <div aria-label="Options d'accessibilité">
+            <input type="checkbox" id="dyslexie" name="dyslexie" value="dyslexie" hidden="hidden">
+            <label for="dyslexie">Mode dyslexique</label>
+
+            <input type="checkbox" id="interligne-augmentation" name="interligne-augmentation"
+                   value="interligne-augmentation" hidden="hidden">
+            <label for="interligne-augmentation">Augmentation des interlignes</label>
+
+            <input type="checkbox" id="contrast" name="contrast" value="contrast" hidden="hidden">
+            <label for="contrast">Contraste Fort</label>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- Article 1: Visite de l'Empire State Building -->
+    <article aria-labelledby="titre-empire">
+        <h2 id="titre-empire">Visite de l'Empire State Building</h2>
+        <div class="article-image-container">
+            <img src="/image/empire_state_building.jpg"
+                 alt="Vue panoramique de New York depuis l'observatoire de l'Empire State Building">
+        </div>
+        <p>Découvrez la vue imprenable sur la ville de New York depuis le sommet de l'Empire State Building, un
+            incontournable pour tout visiteur.</p>
+        <section aria-labelledby="commentaires-empire">
+            <h3 id="commentaires-empire">Commentaires</h3>
+            <ul>
+                <ul>
+                    {{range .}}
+                        {{if eq .Article "1"}}
+                            <li>
+                                <p>-{{.Texte}}</p>
+                            </li>
+                        {{end}}
+                    {{else}}
+                        <li>Pas de commentaires à afficher.</li>
+                    {{end}}
+                </ul>
+            </ul>
+            <form method="post">
+                <input type="hidden" name="article" value="1">
+                <label for="commentaire-empire">Ajouter un commentaire:</label>
+                <input type="text" id="commentaire-empire" name="commentaire">
+                <button type="button" onclick="startDictation('commentaire-empire')">Commencer la Dictée</button>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </article>
+
+
+    <!-- Article 2: Balade dans Central Park -->
+    <article aria-labelledby="titre-central-park">
+        <h2 id="titre-central-park">Balade dans Central Park</h2>
+        <div class="article-image-container">
+            <img src="/image/central_park.jpg" alt="Sentier sinueux à travers Central Park en automne">
+            <p>Une oasis de verdure au cœur de Manhattan, Central Park offre une échappatoire paisible avec ses
+                sentiers, lacs et espaces verts.</p>
+        </div>
+        <section aria-labelledby="commentaires-central-park">
+            <h3 id="commentaires-central-park">Commentaires</h3>
+            <ul>
+                <ul>
+                    {{range .}}
+                        {{if eq .Article "2"}}
+                            <li>
+                                <p>-{{.Texte}}</p>
+                            </li>
+                        {{end}}
+                    {{else}}
+                        <li>Pas de commentaires à afficher.</li>
+                    {{end}}
+                </ul>
+            </ul>
+            <form method="post">
+                <input type="hidden" name="article" value="2">
+                <label for="commentaire-central-park">Ajouter un commentaire:</label>
+                <input type="text" id="commentaire-central-park" name="commentaire">
+                <button type="button" onclick="startDictation('commentaire-central-park')">Commencer la Dictée</button>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </article>
+
+    <!-- Article 3: Exploration de Times Square -->
+    <article aria-labelledby="titre-times-square">
+        <h2 id="titre-times-square">Exploration de Times Square</h2>
+        <div class="article-image-container">
+            <img src="/image/times_square.jpg" alt="Foule traversant Times Square illuminé la nuit">
+        </div>
+        <p>Le cœur battant de New York, Times Square est célèbre pour ses écrans géants, ses spectacles de Broadway et
+            son animation constante.</p>
+        <section aria-labelledby="commentaires-times-square">
+            <h3 id="commentaires-times-square">Commentaires</h3>
+            <ul>
+                <ul>
+                    {{range .}}
+                        {{if eq .Article "3"}}
+                            <li>
+                                <p>-{{.Texte}}</p>
+                            </li>
+                        {{end}}
+                    {{else}}
+                        <li>Pas de commentaires à afficher.</li>
+                    {{end}}
+                </ul>
+            </ul>
+            <form method="post">
+                <input type="hidden" name="article" value="3">
+                <label for="commentaire-times-square">Ajouter un commentaire:</label>
+                <input type="text" id="commentaire-times-square" name="commentaire">
+                <button type="button" onclick="startDictation('commentaire-times-square')">Commencer la Dictée</button>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </article>
+</main>
+<footer aria-label="Informations du pied de page">
+    <section>
+        <h2>A propos</h2> <!-- Utilisez <h2> au lieu de <h3> si c'est le niveau de titre approprié -->
+        <nav aria-label="À propos de nous"> <!-- Ajout de l'élément <nav> avec aria-label pour une meilleure navigation -->
+            <ul>
+                <li>
+                    <a href="/about" rel="noopener noreferrer">A propos de nous</a>
+                </li>
+                <li>
+                    <a href="/personal_data" rel="noopener noreferrer">Données personnelles</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <h2>Aide et assistance</h2> <!-- Utilisez <h2> au lieu de <h3> si c'est le niveau de titre approprié -->
+        <nav aria-label="Aide et assistance"> <!-- Ajout de l'élément <nav> avec aria-label pour une meilleure navigation -->
+            <ul>
+                <li>
+                    <a href="/contact" rel="noopener noreferrer">Contactez-nous</a>
+                </li>
+                <li>
+                    <a href="/faq" rel="noopener noreferrer">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+</body>
+</html>

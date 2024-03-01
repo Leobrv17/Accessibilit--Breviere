@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  blog-db:
+    image: postgres:14.1-alpine
+    container_name: blog-db
+    user: postgres
+    env_file:
+      - .env
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '5432:5432'
+  cgc-webservice:
+    container_name: blog
+    build: ./
+    depends_on:
+      blog-db:
+        condition: service_healthy
+    env_file: .env
+    ports:
+      - "8080:8080"
+    links:
+      - blog-db
+    volumes:
+      - './:/app'

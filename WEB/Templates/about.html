@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Les liens CSS sont corrects. Assurez-vous que les chemins d'accès sont corrects et que les fichiers existent. -->
+    <link rel="stylesheet" href="/static/style/header.css">
+    <link rel="stylesheet" href="/static/style/footer.css">
+    <link rel="stylesheet" href="/static/style/contact.css">
+    <!-- Assurez-vous que le chemin d'accès au script JS est correct et que le fichier existe. -->
+    <script src="/static/script/script.js"></script>
+    <title>Contactez-nous</title>
+</head>
+<body>
+<header id="header">
+    <div class="titre">
+        <div class="logo_titre">
+            <!-- Assurez-vous que le chemin d'accès à l'image du logo est correct et que l'image existe. -->
+            <img src="/image/logo.jpg" alt="Logo de Mon Voyage à New York">
+        </div>
+        <div class="titre_site_web">
+            <h1>Mon Voyage à New York</h1>
+        </div>
+    </div>
+    <!-- Bouton pour afficher le menu d'accessibilité, bonne pratique -->
+    <button id="accessibiliteToggle">Options d'accessibilité</button>
+    <div class="menu_accessibilite" hidden>
+        <div aria-label="Options d'accessibilité">
+            <!-- Il est préférable de ne pas utiliser l'attribut hidden sur les inputs si vous souhaitez qu'ils soient accessibles quand le menu est affiché. -->
+            <input type="checkbox" id="dyslexie" name="dyslexie" value="dyslexie">
+            <label for="dyslexie">Mode dyslexique</label>
+
+            <input type="checkbox" id="interligne-augmentation" name="interligne-augmentation" value="interligne-augmentation">
+            <label for="interligne-augmentation">Augmentation des interlignes</label>
+
+            <input type="checkbox" id="contrast" name="contrast" value="contrast">
+            <label for="contrast">Contraste Fort</label>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- Assurez-vous que l'utilisation de l'iframe pour incorporer une vidéo YouTube respecte les directives d'accessibilité et de confidentialité. -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Vi0bKLJJTb8?si=vBlwNvhENFK0Mv5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <section aria-labelledby="aboutSection">
+        <h2 id="aboutSection">Bienvenue sur Mon Voyage à New York</h2>
+        <!-- Le contenu textuel est approprié et bien structuré. -->
+        <p>
+            Que vous prévoyiez votre première visite dans la Grosse Pomme ou que vous soyez un habitué cherchant de nouvelles aventures, notre forum est là pour vous guider. Notre communauté est dédiée à partager des conseils, des astuces et des expériences pour vous aider à faire de votre voyage à New York une expérience inoubliable.
+        </p>
+        <h3>Pourquoi New York ?</h3>
+        <p>
+            New York offre quelque chose pour chaque voyageur, des lumières de Broadway à l'effervescence de Times Square, en passant par la tranquillité de Central Park.
+        </p>
+        <h3>Ce que vous trouverez ici :</h3>
+        <ul>
+            <li>Conseils de Voyage : Des informations pratiques pour planifier votre visite.</li>
+            <li>Recommandations Personnalisées : Nos membres partagent leurs lieux préférés.</li>
+            <li>Récits de Voyage : Inspirez-vous des récits de nos membres.</li>
+            <li>Événements et Activités : Restez informé des derniers événements.</li>
+            <li>Assistance en Direct : Posez vos questions et obtenez des réponses en temps réel.</li>
+        </ul>
+        <p>
+            Rejoignez-nous pour explorer tout ce que New York a à offrir. Inscrivez-vous aujourd'hui !
+        </p>
+    </section>
+</main>
+<footer aria-label="Informations du pied de page">
+    <!-- La structure du footer est bonne, avec une utilisation appropriée des éléments <section>, <nav>, et <h2>. -->
+    <section>
+        <h2>A propos</h2>
+        <nav aria-label="À propos de nous">
+            <ul>
+                <li>
+                    <a href="/about" rel="noopener noreferrer">A propos de nous</a>
+                </li>
+                <li>
+                    <a href="/personal_data" rel="noopener noreferrer">Données personnelles</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <h2>Aide et assistance</h2>
+        <nav aria-label="Aide et assistance">
+            <ul>
+                <li>
+                    <a href="/contact" rel="noopener noreferrer">Contactez-nous</a>
+                </li>
+                <li>
+                    <a href="/faq" rel="noopener noreferrer">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+</body>
+</html>
